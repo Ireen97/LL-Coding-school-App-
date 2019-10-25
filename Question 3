@@ -1,0 +1,4 @@
+number = 9   #Question3
+
+for j in range(1, 13):
+    print(number,'x',j,'=',number*j)
