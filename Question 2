@@ -1,0 +1,13 @@
+def reverse(string): #Quest 2
+    string1 = ''
+    length = len(string) - 1
+    
+    while length >= 0:
+        string1 = string1 + string[length]
+        length = length - 1
+        
+    return string1
+
+input_str = 'Semenya'
+
+print(reverse(input_str))
