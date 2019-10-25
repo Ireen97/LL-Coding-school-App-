@@ -1,0 +1,27 @@
+def numberofswaps(arr): 
+    n = len(arr) 
+    spot = [*enumerate(arr)] 
+    spot.sort(key = lambda it:it[1])  
+    known = {k:False for k in range(n)} 
+    answer = 0
+    
+    for i in range(n): 
+        if known[i] or spot[i][0] == i: 
+            continue
+            
+        rounds = 0
+        j = i 
+        
+        while not known[j]:   
+            known[j] = True  
+            j = spot[j][0] 
+            rounds += 1
+              
+        if rounds > 0: 
+            answer += (rounds - 1) 
+            
+    return answer 
+  
+arr = [4,3,2,1,0]  
+
+print("Number of swaps required to sort:", numberofswaps(arr))
