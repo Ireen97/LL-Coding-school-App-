@@ -1,0 +1,14 @@
+def fibonacci(n):  #Quest 4  
+    first = 0
+    second = 1
+    
+    if (n < 1): 
+        return
+    
+    for x in range(0, n): 
+        print(second, end = " ") 
+        next = first + second 
+        first = second 
+        second = next
+           
+fibonacci(100) 
